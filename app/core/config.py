@@ -5,6 +5,9 @@ class Settings(BaseSettings):
     api_v1_prefix: str
     database_url : str
 
-    model_config = SettingsConfigDict(env_file=".env")
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        extra="ignore",
+    )
 
 settings = Settings()
